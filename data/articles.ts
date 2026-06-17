@@ -72,7 +72,7 @@ export const articles: Article[] = [
     readTime: "\u9605\u8bfb\u7ea6 5 \u5206\u949f",
     tags: ["\u5976\u916a", "\u98df\u6750", "\u8fa9\u8bba"],
     avatarInitials: "MC",
-    image: "https://images.unsplash.com/photo-1542890147-92cc4e9da5e4?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=600&h=400&fit=crop",
   },
   {
     id: 5,
