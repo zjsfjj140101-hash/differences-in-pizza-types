@@ -1,7 +1,13 @@
 import Link from "next/link";
+import { Playfair_Display } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+});
 
 function Header() {
   return (
@@ -44,11 +50,15 @@ function NavBar() {
 }
 
 function Hero() {
+  const americanImg = "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&h=800&fit=crop";
+  const italianImg = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&h=800&fit=crop";
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-20 pb-16 text-center">
+    <section className="relative mx-auto max-w-5xl px-6 pt-20 pb-16 text-center">
+      <img src={americanImg} alt="" className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 w-64 h-96 object-cover opacity-[0.25] pointer-events-none hidden md:block" />
+      <img src={italianImg} alt="" className="absolute right-0 top-1/2 -translate-y-1/2 -mr-8 w-64 h-96 object-cover opacity-[0.25] pointer-events-none hidden md:block" />
       <div className="inline-flex items-center gap-3 mb-4">
         <div className="h-6 w-1 rounded-full bg-primary" />
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
+        <h1 className={`${playfair.className} text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-primary drop-shadow-sm`}>
           美式披萨 vs 意式披萨
         </h1>
         <div className="h-6 w-1 rounded-full bg-primary" />
